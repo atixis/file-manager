@@ -42,15 +42,15 @@ const Actions = (props) => {
       let actionText
       switch (selectedItemsAction[0].action) {
         case 'delete':
-          actionText = 'Deleting ...'
+          actionText = 'Suppression ...'
           break
 
         case 'rename':
-          actionText = 'Renaming ...'
+          actionText = 'Renommage ...'
           break
 
         default:
-          actionText = 'Moving ...'
+          actionText = 'Deplacement ...'
           break
       }
 
@@ -70,7 +70,7 @@ const Actions = (props) => {
               role="button"
             >
               {icons.Folder}
-              &nbsp;Add Subfolder
+              &nbsp;Ajouter un sous-dossier
             </a>
           </li>
         )
@@ -86,7 +86,7 @@ const Actions = (props) => {
               role="button"
             >
               {icons.Rename}
-              &nbsp;Rename
+              &nbsp;Renommer
             </a>
           </li>
         )
@@ -99,7 +99,7 @@ const Actions = (props) => {
               role="button"
             >
               {icons.Rename}
-              &nbsp;Rename
+              &nbsp;Renommer
             </a>
           </li>
         )
@@ -114,7 +114,7 @@ const Actions = (props) => {
               role="button"
             >
               {icons.Delete}
-              &nbsp;Delete
+              &nbsp;Supprimer
             </a>
           </li>
         )
@@ -127,7 +127,7 @@ const Actions = (props) => {
               role="button"
             >
               {icons.Delete}
-              &nbsp;Delete
+              &nbsp;Supprimer
             </a>
           </li>
         )
@@ -142,7 +142,7 @@ const Actions = (props) => {
               role="button"
             >
               {icons.Download}
-              &nbsp;Download
+              &nbsp;Télécharger
             </a>
           </li>
         )
@@ -165,7 +165,7 @@ const Actions = (props) => {
             role="button"
           >
             {icons.Folder}
-            &nbsp;Add Folder
+            &nbsp;Ajouter un dossier
           </a>
         </li>
       )
