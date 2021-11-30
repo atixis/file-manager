@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Button } from 'reactstrap'
 
 const Actions = (props) => {
   const {
@@ -69,8 +70,8 @@ const Actions = (props) => {
               href="#"
               role="button"
             >
-              {icons.Folder}
-              &nbsp;Ajouter un sous-dossier
+              <Button>{icons.Folder}
+              &nbsp;Ajouter un sous-dossier</Button>
             </a>
           </li>
         )
