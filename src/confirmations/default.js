@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Button } from 'reactstrap'
 
 const ConfirmDeletion = (props) => {
   const {
@@ -19,9 +20,9 @@ const ConfirmDeletion = (props) => {
         {children}
       </a>
       <div>
-        <button type="submit">
+        <Button type="submit" color="danger">
           Confirmer la suppression
-        </button>
+        </Button>
       </div>
     </form>
   )

@@ -71,7 +71,7 @@ const Actions = (props) => {
               role="button"
             >
               <Button color="success">{icons.Folder}
-              &nbsp;Ajouter un sous-dossier héhé</Button>
+              &nbsp;Ajouter un sous-dossier</Button>
             </a>
           </li>
         )
@@ -85,9 +85,10 @@ const Actions = (props) => {
               onClick={onRenameFile}
               href="#"
               role="button"
-            >
+            ><Button color="warning">
               {icons.Rename}
               &nbsp;Renommer
+              </Button>
             </a>
           </li>
         )
@@ -99,8 +100,10 @@ const Actions = (props) => {
               href="#"
               role="button"
             >
+              <Button color="warning">
               {icons.Rename}
               &nbsp;Renommer
+              </Button>
             </a>
           </li>
         )
@@ -114,8 +117,10 @@ const Actions = (props) => {
               href="#"
               role="button"
             >
+              <Button color="danger">
               {icons.Delete}
               &nbsp;Supprimer
+              </Button>
             </a>
           </li>
         )
@@ -127,8 +132,10 @@ const Actions = (props) => {
               href="#"
               role="button"
             >
+              <Button color="danger">
               {icons.Delete}
               &nbsp;Supprimer
+              </Button>
             </a>
           </li>
         )
@@ -165,8 +172,10 @@ const Actions = (props) => {
             href="#"
             role="button"
           >
+            <Button color="info">
             {icons.Folder}
             &nbsp;Ajouter un dossier
+            </Button>
           </a>
         </li>
       )
