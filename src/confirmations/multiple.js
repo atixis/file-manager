@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Button } from 'reactstrap'
 
 const MultipleConfirmDeletion = (props) => {
   const {
@@ -7,9 +8,9 @@ const MultipleConfirmDeletion = (props) => {
   } = props
 
   return (
-    <button className="deleting" onClick={handleDeleteSubmit}>
+    <Button className="deleting" color="danger" onClick={handleDeleteSubmit}>
       Confirmer la suppression
-    </button>
+    </Button>
   )
 }
 
