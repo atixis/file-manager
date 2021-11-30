@@ -70,8 +70,8 @@ const Actions = (props) => {
               href="#"
               role="button"
             >
-              <Button>{icons.Folder}
-              &nbsp;Ajouter un sous-dossier</Button>
+              <Button color="success">{icons.Folder}
+              &nbsp;Ajouter un sous-dossier héhé</Button>
             </a>
           </li>
         )
