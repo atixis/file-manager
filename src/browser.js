@@ -112,7 +112,7 @@ class RawFileBrowser extends React.Component {
     showActionBar: true,
     canFilter: true,
     showFoldersOnFilter: false,
-    noFilesMessage: 'No files.',
+    noFilesMessage: 'Aucun fichier trouvé.',
 
     group: GroupByFolder,
     sort: SortByName,
@@ -723,7 +723,7 @@ class RawFileBrowser extends React.Component {
             contents = (
               <tr>
                 <td colSpan={100}>
-                  No files matching "{this.state.nameFilter}".
+                  Aucun fichier trouvé. "{this.state.nameFilter}".
                 </td>
               </tr>
             )
@@ -748,7 +748,7 @@ class RawFileBrowser extends React.Component {
                       onClick={this.handleShowMoreClick}
                       href="#"
                     >
-                      Show more results
+                      Afficher plus de résultats
                     </a>
                   </td>
                 </tr>
@@ -781,9 +781,9 @@ class RawFileBrowser extends React.Component {
       case 'list':
         if (!contents.length) {
           if (this.state.nameFilter) {
-            contents = (<p className="empty">No files matching "{this.state.nameFilter}"</p>)
+            contents = (<p className="empty">Aucun fichier trouvé "{this.state.nameFilter}"</p>)
           } else {
-            contents = (<p className="empty">No files.</p>)
+            contents = (<p className="empty">Aucun fichier trouvé.</p>)
           }
         } else {
           let more
@@ -796,7 +796,7 @@ class RawFileBrowser extends React.Component {
                   onClick={this.handleShowMoreClick}
                   href="#"
                 >
-                  Show more results
+                  Afficher plus de résultats
                 </a>
               )
             }
