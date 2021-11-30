@@ -151,7 +151,7 @@ const Actions = (props) => {
             >
               <Button color="primary">
               {icons.Download}
-              &nbsp;Télécharger2
+              &nbsp;Télécharger
               </Button>
             </a>
           </li>
