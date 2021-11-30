@@ -149,8 +149,10 @@ const Actions = (props) => {
               href="#"
               role="button"
             >
+              <Button color="primary">
               {icons.Download}
               &nbsp;Télécharger
+              </Button>
             </a>
           </li>
         )
@@ -172,7 +174,7 @@ const Actions = (props) => {
             href="#"
             role="button"
           >
-            <Button color="info">
+            <Button color="success">
             {icons.Folder}
             &nbsp;Ajouter un dossier
             </Button>
