@@ -838,7 +838,6 @@ class RawFileBrowser extends React.Component {
             <ConfirmMultipleDeletionRenderer
               handleDeleteSubmit={this.handleMultipleDeleteSubmit}
             />}
-            {this.props.showActionBar && this.renderActionBar(selectedItems)}
           <div className="files">
             {renderedFiles}
           </div>
