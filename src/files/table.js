@@ -87,8 +87,8 @@ class RawTableFile extends BaseFile {
         </td>
         <td className="size">{fileSize(size)}</td>
         <td className="modified">
-          {console.log('modified : ' + modified)}
-          {typeof modified === 'undefined' ? '-' : formatDistanceToNow(modified, { addSuffix: true })}
+          {console.log('modified : ' + new Date(1638269572245).toLocaleDateString('fr-FR', { day: 'numeric', year: 'numeric', month: 'numeric' }))}
+          {typeof modified === 'undefined' ? '-' : new Date(1638269572245).toLocaleDateString('fr-FR', { day: 'numeric', year: 'numeric', month: 'numeric' })}
         </td>
       </tr>
     )
