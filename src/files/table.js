@@ -2,11 +2,36 @@ import React from 'react'
 import ClassNames from 'classnames'
 import { DragSource, DropTarget } from 'react-dnd'
 import { NativeTypes } from 'react-dnd-html5-backend'
-import { formatDistanceToNow } from 'date-fns'
 import flow from 'lodash/flow'
 
 import BaseFile, { BaseFileConnectors } from './../base-file.js'
 import { fileSize } from './utils.js'
+
+const isDate = (date) => {
+  return (date instanceof Date)
+}
+
+const toDate = (date) => {
+  if (date === undefined) {
+    return new Date(0)
+  }
+  if (isDate(date)) {
+    return date
+  } else {
+    return new Date(parseFloat(date.toString()))
+  }
+}
+
+const formatDate = (date, format) => {
+  const d = toDate(date)
+  return format
+    .replace(/Y/gm, d.getFullYear().toString())
+    .replace(/m/gm, ('0' + (d.getMonth() + 1)).substr(-2))
+    .replace(/d/gm, ('0' + (d.getDate() + 1)).substr(-2))
+    .replace(/H/gm, ('0' + (d.getHours() + 0)).substr(-2))
+    .replace(/i/gm, ('0' + (d.getMinutes() + 0)).substr(-2))
+    .replace(/s/gm, ('0' + (d.getSeconds() + 0)).substr(-2))
+}
 
 class RawTableFile extends BaseFile {
   render() {
@@ -87,7 +112,7 @@ class RawTableFile extends BaseFile {
         </td>
         <td className="size">{fileSize(size)}</td>
         <td className="modified">
-          {typeof modified === 'undefined' ? '-' : new Date(1638269572245).toLocaleDateString('fr-FR', { day: 'numeric', year: 'numeric', month: 'numeric' })}
+          {typeof modified === 'undefined' ? '-' : formatDate(modified, 'Y-m-d H:i:s')}
         </td>
       </tr>
     )
@@ -97,7 +122,7 @@ class RawTableFile extends BaseFile {
 }
 
 const TableFile = flow(
-  DragSource('file', BaseFileConnectors.dragSource, BaseFileConnectors.dragCollect), 
+  DragSource('file', BaseFileConnectors.dragSource, BaseFileConnectors.dragCollect),
   DropTarget(['file', 'folder', NativeTypes.FILE], BaseFileConnectors.targetSource, BaseFileConnectors.targetCollect)
 )(RawTableFile)
 
