@@ -20,7 +20,7 @@ const ConfirmDeletion = (props) => {
       </a>
       <div>
         <button type="submit">
-          Confirm Deletion
+          Confirmer la suppression
         </button>
       </div>
     </form>
