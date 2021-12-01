@@ -584,8 +584,6 @@ class RawFileBrowser extends React.Component {
 
         canDownloadFolder={typeof onDownloadFolder === 'function'}
         onDownloadFolder={this.handleActionBarDownloadClick}
-
-        addButton={this.props.addButton}
       />
     )
 

@@ -168,8 +168,7 @@ const Actions = (props) => {
     // Nothing selected: We're in the 'root' folder. Only allowed action is adding a folder.
     if (canCreateFolder && !nameFilter) {
       actions.push(
-        props.addButton,
-        (<li key="action-add-folder">
+        <li key="action-add-folder">
           <a
             onClick={onCreateFolder}
             href="#"
@@ -180,7 +179,7 @@ const Actions = (props) => {
             &nbsp;Ajouter un dossier
             </Button>
           </a>
-        </li>)
+        </li>
       )
     }
 
