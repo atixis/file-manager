@@ -67,7 +67,7 @@ class RawTableFile extends BaseFile {
             type="text"
             value={this.state.newName}
             onChange={this.handleNewNameChange}
-            onBlur={this.handleNewNameChange}
+            onBlur={this.handleRenameSubmit}
             autoFocus
           />
         </form>
