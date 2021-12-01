@@ -11,7 +11,7 @@ div.rendered-react-keyed-file-browser div.action-bar {
     margin-bottom: 0.5rem;
     border: 0.1rem solid #ddd;
     display: absolute;
-    position: right; }
+    right: 10px; }
   div.rendered-react-keyed-file-browser div.action-bar .item-actions {
     text-align: left;
     margin: 0;
