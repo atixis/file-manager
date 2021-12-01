@@ -61,7 +61,7 @@ class RawListThumbnailFile extends BaseFile {
               type="text"
               value={this.state.newName}
               onChange={this.handleNewNameChange}
-              onBlur={this.handleCancelEdit}
+              onBlur={this.handleNewNameChange}
               autoFocus
             />
           </form>

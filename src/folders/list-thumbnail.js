@@ -42,7 +42,7 @@ class RawListThumbnailFolder extends BaseFolder {
               ref={this.selectFolderNameFromRef}
               value={this.state.newName}
               onChange={this.handleNewNameChange}
-              onBlur={this.handleCancelEdit}
+              onBlur={this.handleNewNameChange}
               autoFocus
             />
           </form>
