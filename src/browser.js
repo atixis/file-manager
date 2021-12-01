@@ -589,6 +589,7 @@ class RawFileBrowser extends React.Component {
 
     return (
       <div className="action-bar">
+        Akram 
         {filter}
         {actions}
       </div>
