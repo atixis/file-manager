@@ -164,7 +164,6 @@ class RawFileBrowser extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.testVal)
     if (this.props.renderStyle === 'table' && this.props.nestChildren) {
       console.warn('Invalid settings: Cannot nest table children in file browser')
     }
@@ -585,6 +584,8 @@ class RawFileBrowser extends React.Component {
 
         canDownloadFolder={typeof onDownloadFolder === 'function'}
         onDownloadFolder={this.handleActionBarDownloadClick}
+
+        addButton={this.props.addButton}
       />
     )
 
