@@ -770,14 +770,15 @@ class RawFileBrowser extends React.Component {
         renderedFiles = (
           <table cellSpacing="0" cellPadding="0">
             {header}
-            Akram
-            <tbody style={{
+            <div style={{
               height: '500px',
               maxHeight: '500px',
               overflowY: 'auto',
             }}>
+              <tbody>
               {contents}
             </tbody>
+            </div>
           </table>
         )
         break
