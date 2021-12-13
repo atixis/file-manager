@@ -771,8 +771,8 @@ class RawFileBrowser extends React.Component {
           <table cellSpacing="0" cellPadding="0">
             {header}
             <div style={{
-              height: '500px',
-              maxHeight: '500px',
+              height: '400px',
+              maxHeight: '400px',
               overflowY: 'auto',
             }}>
               <tbody>
