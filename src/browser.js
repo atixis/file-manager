@@ -747,7 +747,7 @@ class RawFileBrowser extends React.Component {
                       onClick={this.handleShowMoreClick}
                       href="#"
                     >
-                      Show more results
+                      Afficher plus de résultats
                     </a>
                   </td>
                 </tr>
@@ -770,7 +770,11 @@ class RawFileBrowser extends React.Component {
         renderedFiles = (
           <table cellSpacing="0" cellPadding="0">
             {header}
-            <tbody>
+            <tbody style={{
+              height: '500px',
+              maxHeight: '500px',
+              overflowY: 'auto',
+            }}>
               {contents}
             </tbody>
           </table>
@@ -795,7 +799,7 @@ class RawFileBrowser extends React.Component {
                   onClick={this.handleShowMoreClick}
                   href="#"
                 >
-                  Show more results
+                  Afficher plus de résultats
                 </a>
               )
             }
@@ -837,11 +841,7 @@ class RawFileBrowser extends React.Component {
             <ConfirmMultipleDeletionRenderer
               handleDeleteSubmit={this.handleMultipleDeleteSubmit}
             />}
-          <div className="files" style={{
-            height: '500px',
-            maxHeight: '500px',
-            overflowY: 'auto',
-          }}>
+          <div className="files">
             {renderedFiles}
           </div>
         </div>
