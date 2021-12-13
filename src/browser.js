@@ -837,7 +837,11 @@ class RawFileBrowser extends React.Component {
             <ConfirmMultipleDeletionRenderer
               handleDeleteSubmit={this.handleMultipleDeleteSubmit}
             />}
-          <div className="files">
+          <div className="files" style={{
+            height: '500px',
+            maxHeight: '500px',
+            overflowY: 'auto',
+          }}>
             {renderedFiles}
           </div>
         </div>
