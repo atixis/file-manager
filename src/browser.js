@@ -770,15 +770,9 @@ class RawFileBrowser extends React.Component {
         renderedFiles = (
           <table cellSpacing="0" cellPadding="0">
             {header}
-            <div style={{
-              height: '400px',
-              maxHeight: '400px',
-              overflowY: 'auto',
-            }}>
-              <tbody>
+            <tbody>
               {contents}
             </tbody>
-            </div>
           </table>
         )
         break
@@ -843,7 +837,11 @@ class RawFileBrowser extends React.Component {
             <ConfirmMultipleDeletionRenderer
               handleDeleteSubmit={this.handleMultipleDeleteSubmit}
             />}
-          <div className="files">
+          <div className="files" style={{
+              height: '400px',
+              maxHeight: '400px',
+              overflowY: 'auto',
+            }}>
             {renderedFiles}
           </div>
         </div>
