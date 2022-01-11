@@ -18,7 +18,7 @@ div.rendered-react-keyed-file-browser div.action-bar {
   div.rendered-react-keyed-file-browser div.action-bar ul.item-actions {
     display: block;
     flex-grow: 1;
-    min-width: 300px;
+    min-width: 30%;
     margin-left: 10px;
     white-space: nowrap; }
     div.rendered-react-keyed-file-browser div.action-bar ul.item-actions li {
