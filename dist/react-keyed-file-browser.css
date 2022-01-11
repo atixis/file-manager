@@ -5,7 +5,7 @@ div.rendered-react-keyed-file-browser div.action-bar {
   align-items: flex-start; }
   div.rendered-react-keyed-file-browser div.action-bar input[type="search"] {
     display: block;
-    min-width: 300px;
+    min-width: 30%;
     padding: 0.25rem 0.5rem;
     margin-bottom: 0.5rem;
     border: 0.1rem solid #ddd;
