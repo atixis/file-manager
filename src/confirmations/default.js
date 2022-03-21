@@ -21,7 +21,7 @@ const ConfirmDeletion = (props) => {
       </a>
       <div>
         <Button type="submit" color="danger">
-          Confirmer la suppression
+          Confirm deletion
         </Button>
       </div>
     </form>

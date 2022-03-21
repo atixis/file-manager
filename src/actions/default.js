@@ -71,7 +71,7 @@ const Actions = (props) => {
               role="button"
             >
               <Button color="success">{icons.Folder}
-              &nbsp;Ajouter un sous-dossier</Button>
+              &nbsp;Add subfolder</Button>
             </a>
           </li>
         )
@@ -87,7 +87,7 @@ const Actions = (props) => {
               role="button"
             ><Button color="warning">
               {icons.Rename}
-              &nbsp;Renommer
+              &nbsp;Rename
               </Button>
             </a>
           </li>
@@ -102,7 +102,7 @@ const Actions = (props) => {
             >
               <Button color="warning">
               {icons.Rename}
-              &nbsp;Renommer
+              &nbsp;Rename
               </Button>
             </a>
           </li>
@@ -119,7 +119,7 @@ const Actions = (props) => {
             >
               <Button color="danger">
               {icons.Delete}
-              &nbsp;Supprimer
+              &nbsp;Delete
               </Button>
             </a>
           </li>
@@ -134,7 +134,7 @@ const Actions = (props) => {
             >
               <Button color="danger">
               {icons.Delete}
-              &nbsp;Supprimer
+              &nbsp;Delete
               </Button>
             </a>
           </li>
@@ -151,7 +151,7 @@ const Actions = (props) => {
             >
               <Button color="primary">
               {icons.Download}
-              &nbsp;Télécharger
+              &nbsp;Download
               </Button>
             </a>
           </li>
@@ -176,7 +176,7 @@ const Actions = (props) => {
           >
             <Button color="success">
             {icons.Folder}
-            &nbsp;Ajouter un dossier
+            &nbsp;Add folder
             </Button>
           </a>
         </li>

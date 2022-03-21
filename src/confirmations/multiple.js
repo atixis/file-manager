@@ -9,7 +9,7 @@ const MultipleConfirmDeletion = (props) => {
 
   return (
     <Button className="deleting" color="danger" onClick={handleDeleteSubmit}>
-      Confirmer la suppression
+      Confirm deletion
     </Button>
   )
 }
