@@ -24,7 +24,7 @@ const toDate = (date) => {
 
 const formatDate = (date, format) => {
   const d = toDate(date)
-  console.log(date)
+  console.log('new : ', Moment(date).format('DD-MM-YYYY HH:MM:SS'))
   return format
     .replace(/Y/gm, d.getFullYear().toString())
     .replace(/m/gm, ('0' + (d.getMonth() + 1)).substr(-2))
