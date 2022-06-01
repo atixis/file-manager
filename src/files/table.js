@@ -112,7 +112,6 @@ class RawTableFile extends BaseFile {
         </td>
         <td className="size">{fileSize(size)}</td>
         <td className="modified">
-          {console.log(formatDate(modified, 'H:i:s d-m-Y'))}
           {typeof modified === 'undefined' ? '-' : formatDate(modified, 'H:i:s d-m-Y')}
         </td>
       </tr>
