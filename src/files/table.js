@@ -24,11 +24,10 @@ const toDate = (date) => {
 
 const formatDate = (date, format) => {
   const d = toDate(date)
-  console.log('new : ', Moment(date).format('DD-MM-YYYY HH:MM:SS'))
   return format
     .replace(/Y/gm, d.getFullYear().toString())
     .replace(/m/gm, ('0' + (d.getMonth() + 1)).substr(-2))
-    .replace(/d/gm, ('0' + (d.getDate() + 1)).substr(-2))
+    .replace(/d/gm, ('0' + (d.getDate())).substr(-2))
     .replace(/H/gm, ('0' + (d.getHours() + 0)).substr(-2))
     .replace(/i/gm, ('0' + (d.getMinutes() + 0)).substr(-2))
     .replace(/s/gm, ('0' + (d.getSeconds() + 0)).substr(-2))
