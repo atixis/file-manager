@@ -153,7 +153,7 @@ const Actions = (props) => {
             >
               <Button color="primary">
               {icons.Download}
-              &nbsp;Télécharger{isBin}
+              &nbsp; {isBin ? 'Restaurer' : 'Télécharger'}
               </Button>
             </a>
           </li>
