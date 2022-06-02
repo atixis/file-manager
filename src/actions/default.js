@@ -30,6 +30,8 @@ const Actions = (props) => {
     canDownloadFolder,
     onDownloadFolder,
 
+    isBin,
+
   } = props
 
   /** @type any */
@@ -151,7 +153,7 @@ const Actions = (props) => {
             >
               <Button color="primary">
               {icons.Download}
-              &nbsp;Télécharger
+              &nbsp;Télécharger{isBin}
               </Button>
             </a>
           </li>
