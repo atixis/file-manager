@@ -47,6 +47,7 @@ const FontAwesomeIcons = (majorVersion = 4) => {
         Delete: <i className="fa fa-trash-o" aria-hidden="true" />,
         Loading: <i className="fa fa-circle-o-notch fa-spin" aria-hidden="true" />,
         Download: <i className="fa fa-download" aria-hidden="true" />,
+        Restore: <i className="fa fa-reply" aria-hidden="true" />,
       }
     case 5:
       IsFontAwesomeLoaded(5)
