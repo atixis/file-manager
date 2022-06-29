@@ -1,7 +1,7 @@
 {
-  "name": "react-keyed-file-browser-demo-site",
+  "name": "file-manager-demo-site",
   "version": "1.0.0",
-  "description": "Demo site for react-keyed-file-browser package",
+  "description": "Demo site for file-manager package",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "react-keyed-file-browser"
+    "url": "file-manager"
   },
   "author": "ABA Systems Pty Ltd",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "moment": "^2.16.0",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
-    "react-keyed-file-browser": "^1.4.0"
+    "file-manager": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
