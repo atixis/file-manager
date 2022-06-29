@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Moment from 'moment'
 
-import FileBrowser, { FileRenderers, FolderRenderers, Groupers, Icons } from 'file-manager'
+import FileBrowser, { FileRenderers, FolderRenderers, Groupers, Icons } from 'react-keyed-file-browser'
 
 const mount = document.querySelectorAll('div.demo-mount-grouped-thumbnails')
 ReactDOM.render(

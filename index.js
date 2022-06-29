@@ -1,1 +1,1 @@
-module.exports = require('./dist/file-manager')
+module.exports = require('./dist/react-keyed-file-browser')

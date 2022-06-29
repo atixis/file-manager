@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Moment from 'moment'
 
-import FileBrowser, {Icons} from 'file-manager'
+import FileBrowser, {Icons} from 'react-keyed-file-browser'
 
 class NestedEditableDemo extends React.Component {
   state = {

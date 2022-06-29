@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Moment from 'moment'
 
-import FileBrowser from 'file-manager'
+import FileBrowser from 'react-keyed-file-browser'
 
 const mount = document.querySelectorAll('div.demo-mount-flat-simple')
 ReactDOM.render(

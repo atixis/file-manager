@@ -1,4 +1,4 @@
 import React from 'react';
-import "../dist/file-manager.css"
+import "../dist/react-keyed-file-browser.css"
 
 export const decorators = [(Story) => <Story/>];

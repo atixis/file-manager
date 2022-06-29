@@ -829,7 +829,7 @@ class RawFileBrowser extends React.Component {
     const ConfirmMultipleDeletionRenderer = this.props.confirmMultipleDeletionRenderer
 
     return (
-      <div className="rendered-file-manager">
+      <div className="rendered-react-keyed-file-browser">
         {this.props.actions}
         <div className="rendered-file-browser" ref={el => { this.browserRef = el }}>
           {this.props.showActionBar && this.renderActionBar(selectedItems)}
