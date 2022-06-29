@@ -1,0 +1,39 @@
+$main-padding: 0.5rem !default
+$theme-colour-text: #337ab7 !default
+
+div.rendered-react-keyed-file-browser
+  div.action-bar
+    margin-bottom: $main-padding
+    flex-wrap: wrap
+    display: flex
+    align-items: flex-start
+
+    input[type="search"]
+      display: block
+      min-width: 30%
+      padding: $main-padding/2 $main-padding
+      margin-bottom: $main-padding
+      border: 0.1rem solid #ddd
+      position: absolute
+      right: 10px
+
+    .item-actions
+      text-align: left
+      margin: 0
+      padding: 0
+
+    ul.item-actions
+      display: block
+      flex-grow: 1
+      min-width: 30%
+      
+      margin-left: 10px
+      white-space: nowrap
+      li
+        display: inline-block
+        margin: 0
+        &:not(:last-child)
+          margin-right: $main-padding
+
+@import './table-style'
+@import './list-style'
