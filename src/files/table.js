@@ -8,7 +8,7 @@ import BaseFile, { BaseFileConnectors } from './../base-file.js'
 import { fileSize } from './utils.js'
 
 const isDate = (date) => {
-  return (date instanceof Date)
+  return date instanceof Date
 }
 
 const toDate = (date) => {
@@ -27,7 +27,7 @@ const formatDate = (date, format) => {
   return format
     .replace(/Y/gm, d.getFullYear().toString())
     .replace(/m/gm, ('0' + (d.getMonth() + 1)).substr(-2))
-    .replace(/d/gm, ('0' + (d.getDate())).substr(-2))
+    .replace(/d/gm, ('0' + d.getDate()).substr(-2))
     .replace(/H/gm, ('0' + (d.getHours() + 0)).substr(-2))
     .replace(/i/gm, ('0' + (d.getMinutes() + 0)).substr(-2))
     .replace(/s/gm, ('0' + (d.getSeconds() + 0)).substr(-2))
@@ -36,13 +36,23 @@ const formatDate = (date, format) => {
 class RawTableFile extends BaseFile {
   render() {
     const {
-      isDragging, isDeleting, isRenaming, isOver, isSelected,
-      action, url, browserProps, connectDragPreview,
-      depth, size, modified,
+      isDragging,
+      isDeleting,
+      isRenaming,
+      isOver,
+      isSelected,
+      action,
+      url,
+      browserProps,
+      connectDragPreview,
+      depth,
+      size,
+      modified,
     } = this.props
 
-    const icon = browserProps.icons[this.getFileType()] || browserProps.icons.File
-    const inAction = (isDragging || action)
+    const icon =
+      browserProps.icons[this.getFileType()] || browserProps.icons.File
+    const inAction = isDragging || action
 
     const ConfirmDeletionRenderer = browserProps.confirmDeletionRenderer
 
@@ -74,27 +84,17 @@ class RawTableFile extends BaseFile {
       )
     } else {
       name = (
-        <a
-          href={url || '#'}
-          download="download"
-          onClick={this.handleFileClick}
-        >
+        <a href={url || '#'} download="download" onClick={this.handleFileClick}>
           {icon}
           {this.getName()}
         </a>
       )
     }
 
-    let draggable = (
-      <div>
-        {name}
-      </div>
-    )
+    let draggable = <div>{name}</div>
     if (typeof browserProps.moveFile === 'function') {
       draggable = connectDragPreview(draggable)
     }
-    
-    console.log(modified)
 
     const row = (
       <tr
@@ -108,13 +108,13 @@ class RawTableFile extends BaseFile {
         onDoubleClick={this.handleItemDoubleClick}
       >
         <td className="name">
-          <div style={{ paddingLeft: (depth * 16) + 'px' }}>
-            {draggable}
-          </div>
+          <div style={{ paddingLeft: depth * 16 + 'px' }}>{draggable}</div>
         </td>
         <td className="size">{fileSize(size)}</td>
         <td className="modified">
-          {typeof modified === 'undefined' ? '-' : formatDate(modified, 'H:i:s d-m-Y')}
+          {typeof modified === 'undefined'
+            ? '-'
+            : formatDate(modified, 'H:i:s d-m-Y')}
         </td>
       </tr>
     )
@@ -124,8 +124,16 @@ class RawTableFile extends BaseFile {
 }
 
 const TableFile = flow(
-  DragSource('file', BaseFileConnectors.dragSource, BaseFileConnectors.dragCollect),
-  DropTarget(['file', 'folder', NativeTypes.FILE], BaseFileConnectors.targetSource, BaseFileConnectors.targetCollect)
+  DragSource(
+    'file',
+    BaseFileConnectors.dragSource,
+    BaseFileConnectors.dragCollect
+  ),
+  DropTarget(
+    ['file', 'folder', NativeTypes.FILE],
+    BaseFileConnectors.targetSource,
+    BaseFileConnectors.targetCollect
+  )
 )(RawTableFile)
 
 export default TableFile
