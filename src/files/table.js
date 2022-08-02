@@ -93,6 +93,8 @@ class RawTableFile extends BaseFile {
     if (typeof browserProps.moveFile === 'function') {
       draggable = connectDragPreview(draggable)
     }
+    
+    console.log(modified)
 
     const row = (
       <tr
